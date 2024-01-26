@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  color: rgb(0 0 0 / 0.75);
+}
 .social-media-btns::after {
   content: "";
   display: block;
@@ -18,4 +21,32 @@
   height: 90px;
   margin: 0px auto;
   background-color: black;
+}
+
+.sub-heading::after {
+  content: "";
+  display: block;
+  position: relative;
+  bottom: 20px;
+  width: 300px;
+  height: 1px;
+  background-color: black;
+}
+
+.about-sub-heading::after {
+  margin-left: 175px;
+}
+
+.experience-sub-heading::after {
+  margin-left: 25rem;
+}
+
+.projects-sub-heading::after {
+  margin-left: 17rem;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  list-style: circle;
 }
