@@ -5,7 +5,9 @@ import { DownloadIcon } from "@radix-ui/react-icons";
 export const Header = () => {
   return (
     <header className="flex justify-between px-[5rem] shadow">
-      <img className="h-[6rem]" src={logo} />
+      <a href="/">
+        <img className="h-[6rem]" src={logo} />
+      </a>
       <nav className="flex items-center">
         <ul className="flex gap-x-[4rem] items-center">
           <li>Home</li>
