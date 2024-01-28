@@ -12,7 +12,7 @@ export const SocialMediaButtons = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: 1.5 }}
-      className="w-[40px] bottom-0 fixed right-[40px] z-[10]"
+      className="w-[40px] bottom-0 fixed right-[5px] sm:right-[15px] z-[10]"
     >
       <ul className="flex flex-col gap-y-8 items-center m-0 p-0 list-none social-media-btns">
         <li>
