@@ -48,5 +48,22 @@ body {
 .skills-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(140px, 200px));
-  list-style: circle;
+  list-style: none;
+}
+
+.skills-list li::before,
+.experience-list li::before {
+  content: "▹";
+  margin-right: 5px;
+  bottom: 2px;
+  position: relative;
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
 }
