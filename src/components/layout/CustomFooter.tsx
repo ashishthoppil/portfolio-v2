@@ -13,9 +13,13 @@ export const CustomFooter = () => {
     <div className="flex justify-center">
       <Footer container className="w-[800px]">
         <div className="w-full text-center">
-          <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
-            <Footer.Brand href="/" src={logo} className="w-[75px]" alt="Logo" />
-            <Footer.LinkGroup className="flex gap-x-5">
+          <div className="w-full justify-between sm:flex sm:flex-col sm:items-center sm:justify-between">
+            <div className="w-[100%] flex justify-center">
+              <a href="/">
+                <img src={logo} className="w-[75px]" alt="Logo" />
+              </a>
+            </div>
+            <Footer.LinkGroup className="flex gap-x-5 justify-center">
               <Footer.Link href="https://github.com/ashishthoppil/">
                 <GitHubLogoIcon className="scale-150 hover:scale-[1.8] transition duration-300" />
               </Footer.Link>
@@ -30,7 +34,7 @@ export const CustomFooter = () => {
               </Footer.Link>
             </Footer.LinkGroup>
           </div>
-          <Footer.Divider />
+          <Footer.Divider className="mt-5" />
           <Footer.Copyright
             className="pt-4"
             href="/"

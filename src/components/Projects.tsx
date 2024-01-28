@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GitHubLogoIcon, OpenInNewWindowIcon } from "@radix-ui/react-icons";
+import { motion } from "framer-motion";
 
 export const Projects = () => {
   const projects = [
@@ -53,13 +54,20 @@ export const Projects = () => {
     },
   ];
   return (
-    <div id="projects" className="h-screen w-[900px] m-auto">
-      <h2 className="text-[32px] font-semibold sub-heading projects-sub-heading">
+    <div
+      id="projects"
+      className="pt-[5rem] px-[3rem] sm:w-[700px] md:w-[800px] lg:w-[1000px] xl:w-[1300px] relative m-auto"
+    >
+      <h2 className="text-[25px] md:text-[32px] font-semibold sub-heading projects-sub-heading">
         Works I've done
       </h2>
-      <div className="grid grid-cols-3 gap-10 pt-[3rem]">
+      <div className="flex flex-wrap justify-center gap-[2rem] pt-[3rem]">
         {projects.map((project) => (
-          <div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
             <Card className="w-[300px] rounded-sm">
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
@@ -87,7 +95,7 @@ export const Projects = () => {
                 )}
               </CardFooter>
             </Card>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

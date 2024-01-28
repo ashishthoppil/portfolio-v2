@@ -53,21 +53,21 @@ export const Experience = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       id="experience"
-      className="h-full w-[700px] m-auto pb-[17rem]"
+      className="h-full m-auto px-[3rem] pt-[5rem] sm:w-[700px] md:w-[800px] lg:w-[1000px] xl:w-[1300px] relative z-[1]"
     >
-      <h2 className="text-[32px] font-semibold sub-heading experience-sub-heading">
+      <h2 className="text-[25px] md:text-[32px] font-semibold sub-heading experience-sub-heading">
         Professional Experience
       </h2>
       <div className="flex gap-x-5 pt-5 mt-10">
-        <Tabs defaultValue="fingent" className="w-[400px]">
-          <TabsList>
+        <Tabs defaultValue="fingent" orientation="vertical" className="w-full">
+          <TabsList className="flex flex-wrap bg-transparent">
             {experiences.map((experience) => (
               <TabsTrigger value={experience.value}>
                 {experience.company}
               </TabsTrigger>
             ))}
           </TabsList>
-          <div className="pl-2 pt-5 w-[40rem]">
+          <div className="pl-3 pt-[4rem] w-[100%] ">
             {experiences.map((experience) => (
               <TabsContent value={experience.value}>
                 <motion.div
@@ -77,7 +77,7 @@ export const Experience = () => {
                 >
                   <ul className="experience-list">
                     {experience.responsibilities.map((item) => (
-                      <li>{item}</li>
+                      <li className="mt-4">{item}</li>
                     ))}
                   </ul>
                   <div className="flex justify-between pt-5">
@@ -92,7 +92,7 @@ export const Experience = () => {
           </div>
         </Tabs>
       </div>
-      <div className="absolute -bottom-[210%] -left-[20%] w-[45rem] h-[40rem] bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-4000"></div>
+      <div className="absolute sm:block -bottom-[210%] -left-[20%] w-[8rem] h-[6rem] sm:w-[45rem] sm:h-[40rem] bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-4000"></div>
     </motion.div>
   );
 };
