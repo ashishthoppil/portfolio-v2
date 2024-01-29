@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { AvatarIcon } from "@radix-ui/react-icons";
+import { scroll } from "@/lib/utils";
 
 export const HeroSection = () => {
   return (
@@ -53,10 +54,7 @@ export const HeroSection = () => {
           .
         </motion.p>
         <Button
-          onClick={() => {
-            const element = document.getElementById("about-me");
-            element?.scrollIntoView({ behavior: "smooth" });
-          }}
+          onClick={(event) => scroll("about-me", event)}
           className="mt-[3rem] w-fit hover:scale-105 transition duration-400 z-[1]"
         >
           <AvatarIcon className="mr-2 h-4 w-4" />
