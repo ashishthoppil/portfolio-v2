@@ -61,23 +61,29 @@ export const Experience = () => {
       <div className="flex gap-x-5 pt-5 mt-10">
         <Tabs defaultValue="fingent" orientation="vertical" className="w-full">
           <TabsList className="flex flex-wrap bg-transparent">
-            {experiences.map((experience) => (
-              <TabsTrigger value={experience.value}>
+            {experiences.map((experience, index) => (
+              <TabsTrigger
+                key={index}
+                value={experience.value}
+                className="text-white bg-slate-900 rounded-none border-2 border-slate-900"
+              >
                 {experience.company}
               </TabsTrigger>
             ))}
           </TabsList>
-          <div className="pl-3 pt-[4rem] w-[100%] ">
-            {experiences.map((experience) => (
-              <TabsContent value={experience.value}>
+          <div className="pl-3 pt-[6rem] sm:pt-[4rem] w-[100%] ">
+            {experiences.map((experience, index) => (
+              <TabsContent key={index} value={experience.value}>
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.5 }}
                 >
                   <ul className="experience-list">
-                    {experience.responsibilities.map((item) => (
-                      <li className="mt-4">{item}</li>
+                    {experience.responsibilities.map((item, i2) => (
+                      <li key={i2} className="mt-4">
+                        {item}
+                      </li>
                     ))}
                   </ul>
                   <div className="flex justify-between pt-5">

@@ -62,8 +62,9 @@ export const Projects = () => {
         Works I've done
       </h2>
       <div className="flex flex-wrap justify-center gap-[2rem] pt-[3rem]">
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <motion.div
+            key={index}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
@@ -72,8 +73,12 @@ export const Projects = () => {
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
                 <CardDescription className="flex gap-x-2 pt-3">
-                  {project.tech.map((tech) => (
-                    <Badge className="rounded-md z-[1]" variant="default">
+                  {project.tech.map((tech, i2) => (
+                    <Badge
+                      key={i2}
+                      className="rounded-md z-[1]"
+                      variant="default"
+                    >
                       {tech}
                     </Badge>
                   ))}
