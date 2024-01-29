@@ -1,3 +1,4 @@
+import { scroll } from "@/lib/utils";
 import {
   HomeIcon,
   AvatarIcon,
@@ -24,23 +25,23 @@ export const SidebarEmail = () => {
 
       <ul className="flex md:hidden flex-col gap-y-8 items-center m-0 p-0 list-none social-media-btns">
         <li>
-          <a href="https://github.com/ashishthoppil/" target="_blank">
+          <a href="#" onClick={(e) => scroll("home", e)}>
             <HomeIcon className="scale-150 hover:scale-[1.8] transition duration-300" />
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/ashish-thoppil/" target="_blank">
+          <a href="#" onClick={(e) => scroll("about-me", e)}>
             <AvatarIcon className="scale-150 hover:scale-[1.8] transition duration-300" />
           </a>
         </li>
         <li>
-          <a href="https://instagram.com/ashishbthoppil/" target="_blank">
-            <GearIcon className="scale-150 hover:scale-[1.8] transition duration-300" />
+          <a href="#" onClick={(e) => scroll("experience", e)}>
+            <BackpackIcon className="scale-150 hover:scale-[1.8] transition duration-300" />
           </a>
         </li>
         <li>
-          <a href="mailto:ashishthoppil23@gmail.com">
-            <BackpackIcon className="scale-150 hover:scale-[1.8] transition duration-300" />
+          <a href="#" onClick={(e) => scroll("projects", e)}>
+            <GearIcon className="scale-150 hover:scale-[1.8] transition duration-300" />
           </a>
         </li>
       </ul>
