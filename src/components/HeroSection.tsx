@@ -5,7 +5,10 @@ import { scroll } from "@/lib/utils";
 
 export const HeroSection = () => {
   return (
-    <div className="h-screen px-[3rem] sm:w-[700px] md:w-[800px] lg:w-[1000px] xl:w-[1300px] mt">
+    <div
+      id="home"
+      className="h-screen px-[3rem] sm:w-[700px] md:w-[800px] lg:w-[1000px] xl:w-[1300px] mt"
+    >
       <div className="absolute top-[50%] left-[10%] sm:left-[50%] w-[50%] sm:w-[30%] h-[50%] bg-amber-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
       <div className="absolute top-[10%] left-[40%] w-[50%] sm:w-[30%] h-[50%] bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-90 animate-blob animation-delay-1000"></div>
       <div className="absolute bottom-[10%] left-[20%] w-[50%] sm:w-[30%] h-[50%] bg-green-200 rounded-full mix-blend-multiply filter blur-xl opacity-80 animate-blob animation-delay-2000"></div>

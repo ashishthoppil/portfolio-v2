@@ -3,6 +3,7 @@ import resume from "../../assets/documents/resume.pdf";
 import { Button } from "@/components/ui/button";
 import { DownloadIcon } from "@radix-ui/react-icons";
 import { motion } from "framer-motion";
+import { scroll } from "@/lib/utils";
 
 export const Header = () => {
   const resumeDownload = () => {
@@ -55,7 +56,8 @@ export const Header = () => {
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
                 <a
-                  href="/"
+                  href="#"
+                  onClick={(e) => scroll("home", e)}
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-slate-700 md:p-0 dark:text-white md:dark:hover:text-slate-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                   aria-current="page"
                 >
@@ -64,7 +66,8 @@ export const Header = () => {
               </li>
               <li>
                 <a
-                  href="#about-me"
+                  href=""
+                  onClick={(e) => scroll("about-me", e)}
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-slate-700 md:p-0 dark:text-white md:dark:hover:text-slate-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   About
@@ -72,7 +75,8 @@ export const Header = () => {
               </li>
               <li>
                 <a
-                  href="#experience"
+                  href="#"
+                  onClick={(e) => scroll("experience", e)}
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-slate-700 md:p-0 dark:text-white md:dark:hover:text-slate-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   Experience
@@ -80,24 +84,20 @@ export const Header = () => {
               </li>
               <li>
                 <a
-                  href="#projects"
+                  href="#"
+                  onClick={(e) => scroll("projects", e)}
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-slate-700 md:p-0 dark:text-white md:dark:hover:text-slate-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   Projects
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-slate-700 md:p-0 dark:text-white md:dark:hover:text-slate-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                <Button
+                  onClick={resumeDownload}
+                  className="hover:scale-105 transition duration-400 -mt-[10px]"
                 >
-                  <Button
-                    onClick={resumeDownload}
-                    className="hover:scale-105 transition duration-400 -mt-[10px]"
-                  >
-                    <DownloadIcon className="mr-2 h-4 w-4" /> Resume
-                  </Button>
-                </a>
+                  <DownloadIcon className="mr-2 h-4 w-4" /> Resume
+                </Button>
               </li>
             </ul>
           </div>
