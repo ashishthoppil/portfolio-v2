@@ -79,13 +79,17 @@ export const Experience = () => {
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <div className="flex justify-between pt-5 text-lg mb-[50px]">
+                  <div className="flex flex-col gap-y-5 sm:flex-row justify-between pt-5 sm:text-lg mb-[50px]">
                     <span>
                       <strong>
                         <u>Position</u>: {experience.designation}
                       </strong>
                     </span>
-                    <span className="underline">{experience.year}</span>
+                    <span>
+                      <strong>
+                        <u>Duration</u>: {experience.year}
+                      </strong>
+                    </span>
                   </div>
                   <ul className="experience-list">
                     {experience.responsibilities.map((item, i2) => (
