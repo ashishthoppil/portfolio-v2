@@ -24,7 +24,7 @@ export const Experience = () => {
         "Mentored junior team members, providing guidance on best practices, coding standards, and fostering a collaborative learning environment.",
         "Received the 'Employee of the Year' award, highlighting exceptional contributions, dedication, and impact on the team and company.",
       ],
-      designation: "Software Engineer",
+      designation: "Senior Software Engineer",
       year: "2021 - 2022",
     },
     {
@@ -79,6 +79,14 @@ export const Experience = () => {
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.5 }}
                 >
+                  <div className="flex justify-between pt-5 text-lg mb-[50px]">
+                    <span>
+                      <strong>
+                        <u>Position</u>: {experience.designation}
+                      </strong>
+                    </span>
+                    <span className="underline">{experience.year}</span>
+                  </div>
                   <ul className="experience-list">
                     {experience.responsibilities.map((item, i2) => (
                       <li key={i2} className="mt-4">
@@ -86,12 +94,6 @@ export const Experience = () => {
                       </li>
                     ))}
                   </ul>
-                  <div className="flex justify-between pt-5">
-                    <span>
-                      <strong>Position: </strong> {experience.designation}
-                    </span>
-                    <span>{experience.year}</span>
-                  </div>
                 </motion.div>
               </TabsContent>
             ))}

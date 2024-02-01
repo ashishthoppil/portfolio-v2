@@ -29,10 +29,10 @@ export const About = () => {
             My name is Ashish B. Thoppil. I enjoy learning new things and
             building stuff for the web. I hold a Masters in Computer
             Applications from a reputed University in{" "}
-            <span className="text-amber-700 hover:text-amber-800 hover:underline">
-              Kerala
+            <span className="text-amber-700 hover:text-amber-800 hover:underline cursor-pointer">
+              Kerala, India
             </span>
-            , which is where I am from.
+            .
           </p>
           <p className="mt-10">
             Differing from many enthusiasts in the computer realm, my affection
@@ -50,10 +50,12 @@ export const About = () => {
           <ul className="skills-list mt-5">
             <li>JavaScript</li>
             <li>TypeScript</li>
-            <li>React</li>
+            <li>React JS</li>
             <li>TailwindCSS</li>
-            <li>Vite</li>
             <li>PHP</li>
+            <li>Bootstrap</li>
+            <li>Vite</li>
+            <li>Webpack</li>
           </ul>
         </motion.div>
         <motion.img
