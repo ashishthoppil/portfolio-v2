@@ -25,16 +25,7 @@ export const Experience = () => {
         "Received the 'Employee of the Year' award, highlighting exceptional contributions, dedication, and impact on the team and company.",
       ],
       designation: "Senior Software Engineer",
-      year: "2021 - 2022",
-    },
-    {
-      value: "freelance",
-      company: "Freelance",
-      responsibilities: [
-        "Worked on a few static and dynamic websites using React.js with clients from UAE and Australia.",
-      ],
-      designation: "Freelance Frontend Engineer",
-      year: "2020 - 2021",
+      year: "2020 - 2022",
     },
     {
       value: "reizend",
