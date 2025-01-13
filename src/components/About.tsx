@@ -51,6 +51,7 @@ export const About = () => {
             <li>JavaScript</li>
             <li>TypeScript</li>
             <li>React JS</li>
+            <li>Next.js</li>
             <li>TailwindCSS</li>
             <li>PHP</li>
             <li>Bootstrap</li>

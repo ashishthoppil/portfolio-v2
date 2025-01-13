@@ -2,7 +2,18 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
 
 export const Experience = () => {
-  const experiences = [
+  const experiences = [ 
+    {
+      value: "dbiz",
+      company: "Dbiz.ai",
+      responsibilities: [
+        "Worked on developing a RAG AI chatbot and helped enhance its performance and features.",
+        "Collaborated with cross-functional teams, including designers, backend developers, and stakeholders, to implement UI/UX enhancements that improved user engagement.",
+        "Analyzed and optimized frontend performance to enhance site speed and reduce loading times.",
+      ],
+      designation: "Frontend Analyst",
+      year: "2024 - Present",
+    },
     {
       value: "fingent",
       company: "Fingent Global Solutions",
@@ -50,7 +61,7 @@ export const Experience = () => {
         Professional Experience
       </h2>
       <div className="flex gap-x-5 pt-5 mt-10">
-        <Tabs defaultValue="fingent" orientation="vertical" className="w-full">
+        <Tabs defaultValue="dbiz" orientation="vertical" className="w-full">
           <TabsList className="flex flex-wrap bg-transparent">
             {experiences.map((experience, index) => (
               <TabsTrigger
@@ -70,7 +81,7 @@ export const Experience = () => {
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <div className="flex flex-col gap-y-5 sm:flex-row justify-between pt-5 sm:text-lg mb-[50px]">
+                  <div className="flex flex-col gap-y-5 sm:flex-row justify-between pt-5 sm:text-md mb-[50px]">
                     <span>
                       <strong>
                         <u>Position</u>: {experience.designation}

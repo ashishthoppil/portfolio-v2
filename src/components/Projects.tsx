@@ -13,12 +13,20 @@ import { motion } from "framer-motion";
 export const Projects = () => {
   const projects = [
     {
+      title: "Lumi.ai",
+      description:
+        "A multi tenant RAG AI chatbot which eemploys gpt-4 to answer user queries according to the knowledge base of the client, currently in progress. ",
+      tech: ["Next.js", "Vercel AI SDK", "OpenAI APIs"],
+      github: "https://github.com/ashishthoppil/mt-ai-chatbot",
+      link: "https://mt-ai-chatbot.vercel.app/",
+    },
+    {
       title: "WokieTokie!",
       description:
         "This is a Vanilla JS project used to recognize speech and convert and utter the recognized speech to a selected language",
-      tech: ["HTML5", "CSS3", "Vanilla JS"],
-      github: "https://github.com/ashishthoppil/translate-app",
-      link: "https://wokietokie.xyz/",
+      tech: ["Next.js", "JS", "AWS Polly", "Google Cloud APIs"],
+      github: "https://github.com/ashishthoppil/wokie-tokie-web",
+      link: "https://wokietokie.netlify.app/",
     },
     {
       title: "Portfolio v1",
@@ -75,8 +83,9 @@ export const Projects = () => {
                 <CardDescription className="flex gap-x-2 pt-3">
                   {project.tech.map((tech, i2) => (
                     <Badge
+                      title={tech}
                       key={i2}
-                      className="rounded-md z-[1]"
+                      className="rounded-md z-[1] line-clamp-1 "
                       variant="default"
                     >
                       {tech}
