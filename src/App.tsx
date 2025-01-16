@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Header />
-      <SocialMediaButtons />
+      {/* <SocialMediaButtons /> */}
       <SidebarEmail />
       <HeroSection />
       <About />
