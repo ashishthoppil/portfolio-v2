@@ -18,7 +18,7 @@ export const Projects = () => {
         "A multi tenant RAG AI chatbot which eemploys gpt-4 to answer user queries according to the knowledge base of the client, currently in progress. ",
       tech: ["Next.js", "Vercel AI SDK", "OpenAI APIs"],
       github: "https://github.com/ashishthoppil/mt-ai-chatbot",
-      link: "https://mt-ai-chatbot.vercel.app/",
+      link: "https://mt-ai-chatbot-git-main-ashishs-projects-33ba2137.vercel.app/chat",
     },
     {
       title: "WokieTokie!",
