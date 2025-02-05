@@ -49,10 +49,10 @@ export const HeroSection = () => {
           Currently busy with creating accessible and fluid applications at{" "}
           <a
             className="text-amber-700 hover:text-amber-800 underline"
-            href="https://www.fingent.com"
+            href="https://dbiz.ai/"
             target="_blank"
           >
-            Fingent Global Solutions
+            Dbiz AI Solutions
           </a>
           .
         </motion.p>
