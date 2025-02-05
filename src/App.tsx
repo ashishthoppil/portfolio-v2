@@ -1,5 +1,5 @@
 import { Header } from "./components/layout/Header";
-import { SocialMediaButtons } from "./components/layout/SocialMediaButtons";
+// import { SocialMediaButtons } from "./components/layout/SocialMediaButtons";
 import { SidebarEmail } from "./components/layout/SidebarEmail";
 import { HeroSection } from "./components/HeroSection";
 import { About } from "./components/About";
@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Header />
-      <SocialMediaButtons />
+      {/* <SocialMediaButtons /> */}
       <SidebarEmail />
       <HeroSection />
       <About />
