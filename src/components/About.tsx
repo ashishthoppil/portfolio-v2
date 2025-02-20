@@ -66,6 +66,7 @@ export const About = () => {
           transition={{ duration: 1.5 }}
           className="md:h-[20rem]"
           src={portrait}
+          alt="Ashish B Thoppil"
         />
       </div>
     </div>
