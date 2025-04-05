@@ -14,7 +14,7 @@ import { useEffect } from "react";
 function App() {
 
   useEffect(() => {
-    let focus = document.querySelector(".bg-focus");
+    let focus = document.querySelector<any>(".bg-focus");
     document.addEventListener("mousemove", function(e) {
       let x = e.clientX;
       let y = e.clientY;
