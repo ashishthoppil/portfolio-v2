@@ -1,69 +1,86 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
-import { AvatarIcon } from "@radix-ui/react-icons";
+import { AvatarIcon, GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { scroll } from "@/lib/utils";
+import { About } from "./About";
+import { Experience } from "./Experience";
+import { MailIcon } from "lucide-react";
+import { Projects } from "./Projects";
+import { Contact } from "./Contact";
+import { Header } from "./layout/Header";
 
 export const HeroSection = () => {
   return (
+    <>
     <div
       id="home"
-      className="h-screen px-[3rem] sm:w-[700px] md:w-[800px] lg:w-[1000px] xl:w-[1300px] mt"
+      className="flex flex-col md:flex-row md:gap-20 items-start bg-black py-[2rem] md:py-[8rem] px-[2rem] lg:px-[6rem] xl:px-[10rem] z-[1]"
     >
-      <div className="absolute top-[50%] left-[10%] sm:left-[50%] w-[50%] sm:w-[30%] h-[50%] bg-amber-300 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
-      <div className="absolute top-[10%] left-[40%] w-[50%] sm:w-[30%] h-[50%] bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-90 animate-blob animation-delay-1000"></div>
-      <div className="absolute bottom-[10%] left-[20%] w-[50%] sm:w-[30%] h-[50%] bg-green-200 rounded-full mix-blend-multiply filter blur-xl opacity-80 animate-blob animation-delay-2000"></div>
-      <div className="absolute bottom-[100%] left-[10%] w-[50%] sm:w-[30%] h-[50%] bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-3000"></div>
-      <div className="grid justify-center pt-[10rem] m-auto text-black/[0.75]">
-        <motion.h1
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="text-base font-normal"
-        >
-          Hi there! My name is
-        </motion.h1>
+      <div className="h-[90vh] md:sticky top-20 flex flex-col items-start pt-[6rem] md:pt-[0px] justify-start w-full md:w-[40%]">
         <motion.h3
           initial={{ opacity: 0, marginTop: 5 }}
           whileInView={{ opacity: 1, marginTop: 0 }}
           transition={{ duration: 1 }}
-          className="text-[25px] md:text-[40px] lg:text-[80px] font-semibold pt-[1rem]"
+          className="text-white text-left text-[36px] md:text-[40px] lg:text-[4rem] font-bold pt-[1rem]"
         >
-          Ashish B Thoppil.
+          Ashish Thoppil
         </motion.h3>
-        <motion.h3
-          initial={{ opacity: 0, marginTop: 5 }}
-          whileInView={{ opacity: 1, marginTop: 0 }}
-          transition={{ duration: 1.5 }}
-          className="text-[25px] md:text-[40px] lg:text-[80px] font-semibold"
-        >
-          I love building stuff.
-        </motion.h3>
+        <div className="flex items-center gap-2">
+          <motion.h3
+            initial={{ opacity: 0, marginTop: 5 }}
+            whileInView={{ opacity: 1, marginTop: 0 }}
+            transition={{ duration: 1 }}
+            className="text-white text-left text-[16px] md:text-[40px] lg:text-[1.5rem] font-semibold"
+          >
+            Full Stack Engineer
+          </motion.h3>
+          <motion.div 
+            initial={{ opacity: 0, marginTop: 5 }}
+            whileInView={{ opacity: 1, marginTop: 0 }}
+            transition={{ duration: 1 }}
+            className="flex items-center gap-2">
+            <img className="grayscale hover:scale-110 duration-200" width="30" height="30" src="https://img.icons8.com/fluency/48/javascript.png" alt="javascript"/>
+            <img className="grayscale hover:scale-110 duration-200" width="30" height="30" src="https://img.icons8.com/plasticine/100/react.png" alt="react"/>
+            <img className="grayscale hover:scale-110 duration-200" width="30" height="30" src="https://img.icons8.com/fluency/48/node-js.png" alt="node-js"/>
+            <img className="grayscale hover:scale-110 duration-200" width="30" height="30" src="https://img.icons8.com/nolan/64/php--v2.png" alt="php--v2"/>
+          </motion.div>
+        </div>
         <motion.p
           initial={{ opacity: 0, marginTop: 5 }}
           whileInView={{ opacity: 1, marginTop: 0 }}
-          transition={{ duration: 2 }}
-          className="text-base leading-6 pt-[1rem] md:text-[18px] md:leading-7 md:pt-[1rem] lg:text-xl lg:leading-7 z-[1]"
+          transition={{ duration: 1 }}
+          className="text-white text-[16px] md:text-[16px] lg:text-[16px] font-normal pt-[1rem]"
         >
-          I'm a software engineer focusing on creating meticulous, dynamic web
-          experiences. <br />
-          Currently busy with creating accessible and fluid applications at{" "}
-          <a
-            className="text-amber-700 hover:text-amber-800 underline"
-            href="https://dbiz.ai/"
-            target="_blank"
-          >
-            Dbiz AI Solutions
-          </a>
-          .
+          A versatile Engineer with 5+ years of experience, focusing on building accessible and user 
+          friendly experiences.
         </motion.p>
-        <Button
-          onClick={(event) => scroll("about-me", event)}
-          className="mt-[3rem] w-fit hover:scale-105 transition duration-400 z-[1]"
+        <motion.div 
+          initial={{ opacity: 0, marginTop: 50 }}
+          whileInView={{ opacity: 1, marginTop: 30 }}
+          transition={{ duration: 1 }}
+          className="flex gap-5 mt-10"
         >
-          <AvatarIcon className="mr-2 h-4 w-4" />
-          Know more about me!
-        </Button>
+          <a target="_blank" className="hover:scale-110 duration-200" href="https://www.instagram.com/ashishbthoppil/">
+            <InstagramLogoIcon width={30} height={30} className="text-white grayscale" />
+          </a>
+          <a target="_blank" className="hover:scale-110 duration-200" href="https://github.com/ashishthoppil">
+            <GitHubLogoIcon width={30} height={30} className="text-white grayscale" />
+          </a>
+          <a target="_blank" className="hover:scale-110 duration-200" href="https://www.linkedin.com/in/ashish-thoppil">
+            <LinkedInLogoIcon width={30} height={30} className="text-white grayscale" />
+          </a>
+          <a target="_blank" className="hover:scale-110 duration-200" href="mailto:ashisht.developer@gmail.com">
+            <MailIcon width={30} height={30} className="text-white grayscale" />
+          </a>
+        </motion.div>
+      </div>
+      <div className="flex flex-col gap-[7rem] items-start justify-start md:justify-center w-full md:w-[60%] overflow-y-auto">
+        <About />
+        <Experience />
+        <Projects />
+        <Contact />
       </div>
     </div>
+    </>
   );
 };
