@@ -1,13 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { GitHubLogoIcon, OpenInNewWindowIcon } from "@radix-ui/react-icons";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { motion } from "framer-motion";
 import { ExternalLinkIcon } from "lucide-react";
 

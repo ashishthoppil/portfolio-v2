@@ -1,13 +1,10 @@
 import { motion } from "framer-motion";
-import { Button } from "./ui/button";
-import { AvatarIcon, GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-import { scroll } from "@/lib/utils";
+import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { About } from "./About";
 import { Experience } from "./Experience";
 import { MailIcon } from "lucide-react";
 import { Projects } from "./Projects";
 import { Contact } from "./Contact";
-import { Header } from "./layout/Header";
 
 export const HeroSection = () => {
   return (

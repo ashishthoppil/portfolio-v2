@@ -1,5 +1,4 @@
-import { EnvelopeOpenIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
-import { Button } from "./ui/button";
+import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import { motion } from "framer-motion";
 
 export const Contact = () => {
